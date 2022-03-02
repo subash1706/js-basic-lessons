@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagel</title>
+</head>
+<body>
+    <form name="myform">
+        <p>name:<input placeholder="enter name"
+        name="name" type="text" size="30"></p>
+        <p>email:<input placeholder="enter email address"
+            nmae="email" type="text" size="30"></p>
+            <p>age:<input placeholder="enter age"
+                nmae="age" type="text" size="3"></p>
+                <p>job:<select title="joblist"
+                name="job">
+                <option>---select one---</option>
+                <option value="student">student</option>
+                <option value="businessperson">business person</option>
+            </select></p>
+            <p><input type="submit" value="send!" onclick="checkForm();
+            return false;"></p>
+            <p><button type="button" onclick="openwindow()">B1</button></p>
+    </form>
+    <script type="text/javascript">
+        function checkForm() {
+            var formname =document.myform.name;
+            var formemail =document.myform.email;
+            var formage =document.myform.age;
+            var formjob =document.myform.job;
+            if(formname.value.indexOf(" ") == -1) {
+                alert("please enter your full name");
+                formname.focus();
+                return;
+            }
+            if(foremail.value.indexOf("@") == -1)||(foremail.value.indexOf(".") == -1) 
+            {
+                alert("please enter a valid e-mail address");
+                formemail.focus();
+                return;
+            }
+            let formagevalue = parseInt(formage.value);
+            if(formagevalue <8) || (formagevalue >58 )
+            { 
+                alert("age must be between 8 and 58!");
+                formeage.focus();
+                return;
+            }
+        if(formjob.selectedindex ==0) {
+            alert("please select your job from the list");
+                formjob.focus();
+                return; 
+        }
+        document.myform.submit();
+    }
+    </script>
+</body>
+</html>
