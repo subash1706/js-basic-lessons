@@ -1,3 +1,6 @@
+/* eslint-disable semi */
+/* eslint-disable no-unused-vars */
+/* eslint-disable quotes */
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -14,9 +17,13 @@ const reset = document.getElementById("reset");
 const inpPeople = document.getElementById("inpPeople");
 const customTips = document.getElementById("custom");
 
+// Function that runs the entire page //
+// eslint-disable-next-line space-before-function-paren
 function calculateTip(tip5, tip10, tip15, tip25, tip50, reset) {
   const d = document;
   d.addEventListener("click", (e) => {
+    // Function that calls the error
+    // eslint-disable-next-line space-before-function-paren
     function showError() {
       if (bill.value === "") {
         const billError = document.getElementById("billError");
@@ -45,71 +52,85 @@ function calculateTip(tip5, tip10, tip15, tip25, tip50, reset) {
       }
     }
 
+    // ------------------------------------------------------------------------------//
+
     if (e.target.matches(tip5)) {
+      // Function that is executed if the fields are empty //
       if (bill.value === "" || inpPeople.value === "") {
         showError();
+        // --------------------------------------------------------------------//
+
+        // Function that is executed if the fields are empty //
       }
       if (bill.value && inpPeople.value) {
-        let resultado = (bill.value * 5) / 100;
-        let resultado2 = resultado;
-        let a = parseInt(resultado);
-        let b = parseInt(resultado2) / inpPeople.value;
+        const resultado = (bill.value * 5) / 100;
+        const resultado2 = resultado;
+        const a = parseInt(resultado); // 500
+        const b = parseInt(resultado2) / inpPeople.value; // 500 + 25 = 525
 
         document.querySelector(".textDiv").innerHTML = a + ",00";
         document.querySelector(".secondTextDiv").innerHTML = b + ",00";
       }
     }
     if (e.target.matches(tip10)) {
+      // Function that is executed if the fields are empty //
       if (bill.value === "" || inpPeople.value === "") {
         showError();
+        // --------------------------------------------------------------------//
       }
       if (bill.value && inpPeople.value) {
-        let resultado = (bill.value * 10) / 100;
-        let resultado2 = resultado;
-        let a = parseInt(resultado);
-        let b = parseInt(resultado2) / inpPeople.value;
+        const resultado = (bill.value * 10) / 100;
+        const resultado2 = resultado;
+        const a = parseInt(resultado); // 500
+        const b = parseInt(resultado2) / inpPeople.value; // 500 + 25 = 525
 
         document.querySelector(".textDiv").innerHTML = a + ",00";
         document.querySelector(".secondTextDiv").innerHTML = b + ",00";
       }
     }
     if (e.target.matches(tip15)) {
+      // Function that is executed if the fields are empty //
       if (bill.value === "" || inpPeople.value === "") {
         showError();
+        // ------------------------------------------------------------------//
       }
       if (bill.value && inpPeople.value) {
-        let resultado = (bill.value * 15) / 100;
-        let resultado2 = resultado;
-        let a = parseInt(resultado);
-        let b = parseInt(resultado2) / inpPeople.value;
+        const resultado = (bill.value * 15) / 100;
+        const resultado2 = resultado;
+        const a = parseInt(resultado); // 500
+        const b = parseInt(resultado2) / inpPeople.value; // 500 + 25 = 525
 
         document.querySelector(".textDiv").innerHTML = a + ",00";
         document.querySelector(".secondTextDiv").innerHTML = b + ",00";
       }
     }
     if (e.target.matches(tip25)) {
+      // Function that is executed if the fields are empty //
       if (bill.value === "" || inpPeople.value === "") {
         showError();
+        // ------------------------------------------------------------------//
       }
       if (bill.value && inpPeople.value) {
-        let resultado = (bill.value * 25) / 100;
-        let resultado2 = resultado;
-        let a = parseInt(resultado);
-        let b = parseInt(resultado2) / inpPeople.value;
+        const resultado = (bill.value * 25) / 100;
+        const resultado2 = resultado;
+        const a = parseInt(resultado); // 500
+        const b = parseInt(resultado2) / inpPeople.value; // 500 + 25 = 525
 
         document.querySelector(".textDiv").innerHTML = a + ",00";
         document.querySelector(".secondTextDiv").innerHTML = b + ",00";
       }
     }
     if (e.target.matches(tip50)) {
+      // Function that is executed if the fields are empty //
       if (bill.value === "" || inpPeople.value === "") {
         showError();
+        // ------------------------------------------------------------------//
       }
       if (bill.value && inpPeople.value) {
-        let resultado = (bill.value * 50) / 100;
-        let resultado2 = resultado;
-        let a = parseInt(resultado);
-        let b = parseInt(resultado2) / inpPeople.value;
+        const resultado = (bill.value * 50) / 100;
+        const resultado2 = resultado;
+        const a = parseInt(resultado); // 500
+        const b = parseInt(resultado2) / inpPeople.value; // 500 + 25 = 525
 
         document.querySelector(".textDiv").innerHTML = a + ",00";
         document.querySelector(".secondTextDiv").innerHTML = b + ",00";
@@ -156,8 +177,8 @@ function calculateTip(tip5, tip10, tip15, tip25, tip50, reset) {
 
     const tipResult = (bill.value * f) / 100;
 
-    let a = parseInt(tipResult);
-    let b = parseInt(tipResult / g);
+    const a = parseInt(tipResult);
+    const b = parseInt(tipResult / g);
 
     document.querySelector(".textDiv").innerHTML = tipResult + ",00";
     document.querySelector(".secondTextDiv").innerHTML = b + ",00";
