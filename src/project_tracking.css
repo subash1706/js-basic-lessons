@@ -1,0 +1,390 @@
+/* font-family: 'Barlow', sans-serif;
+font-family: 'Barlow Condensed', sans-serif; */
+
+:root {
+  --Red: hsl(0, 100%, 68%);
+  --Very-Dark-Blue: hsl(230, 29%, 20%);
+  --Dark-Grayish-Blue: hsl(230, 11%, 40%);
+  --Grayish-Blue: hsl(231, 7%, 65%);
+  --Light-Grayish-Blue: hsl(207, 33%, 95%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  min-height: 100vh;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.spot {
+  background-color: var(--Light-Grayish-Blue);
+  width: 50%;
+  min-height: 62%;
+  align-self: flex-end;
+  position: absolute;
+  top: 0;
+  border-bottom-left-radius: 50px;
+  z-index: -1;
+}
+
+.container {
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  min-height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.2rem;
+}
+
+.logo {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.nav-list {
+  width: 83%;
+  background-color: #fff;
+  font-family: "Barlow Condensed", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 15%;
+  padding: 0.5rem;
+}
+
+.nav-list li {
+  padding: 0.5rem;
+}
+
+.nav-list li a {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--Very-Dark-Blue);
+  cursor: pointer;
+  transition: text-decoration 0.3s ease-out;
+}
+
+.nav-list li a:hover,
+.nav-list li a:focus {
+  text-decoration: underline;
+}
+
+.nav-list li:last-child {
+  border-top: 1px solid #d3d2d2;
+  width: 90%;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+
+.nav-list li:last-child > a {
+  color: var(--Grayish-Blue);
+}
+
+.open {
+  cursor: pointer;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.hero-img {
+  display: flex;
+  align-self: flex-end;
+  width: 33rem;
+  padding-left: 1.8rem;
+  margin: 0 -8.5rem 4.5rem 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem 2.2rem;
+}
+
+.hero-content .new {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--Grayish-Blue);
+  margin-bottom: 1rem;
+}
+
+.hero-content .new span {
+  background-color: var(--Very-Dark-Blue);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  padding: 0.25rem 0.7rem;
+  margin-right: 0.8rem;
+}
+
+.hero-content h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 2.5rem;
+  color: var(--Very-Dark-Blue);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.text {
+  font-size: 1.2rem;
+  color: var(--Dark-Grayish-Blue);
+  margin-bottom: 1rem;
+}
+
+.hero-content_btn {
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.btn {
+  background-color: var(--Red);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  padding: 0.7rem 1.3rem;
+  margin-right: 1.5rem;
+}
+
+.preview {
+  color: var(--Grayish-Blue);
+  letter-spacing: 2px;
+}
+
+.btn:hover,
+.preview:hover {
+  opacity: 0.8;
+}
+
+.btn:focus,
+.preview:focus {
+  opacity: 0.8;
+}
+.hidden-btn {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 420px) {
+  .container {
+    max-width: 600px;
+  }
+
+  header,
+  .hero-content {
+    padding: 1rem 3rem;
+  }
+
+  .hero-img {
+    padding-left: 1.5rem;
+    margin: 0 -6rem 4.5rem 0;
+  }
+
+  .spot {
+    min-height: 60%;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .container {
+    max-width: 800px;
+  }
+
+  header,
+  .hero-content {
+    padding: 1rem 4rem;
+  }
+
+  .hero-img {
+    align-self: center;
+    padding-left: 1rem;
+    margin: 0 -1rem 4.5rem 0;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .hero-img {
+    align-self: center;
+    margin: 0 0 4.5rem 0;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    text-align: center;
+    padding: 0 5rem;
+  }
+
+  .text {
+    text-align: center;
+    padding: 0 7rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    max-width: 1120px;
+  }
+
+  .open {
+    display: none;
+  }
+
+  .nav-list {
+    background-color: transparent;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    box-shadow: none;
+    position: static;
+  }
+
+  .nav-list li:last-child {
+    width: 30%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    max-width: 1500px;
+  }
+
+  .nav-width li:last-child {
+    width: 70%;
+  }
+
+  .hero {
+    margin-top: 6rem;
+    flex-direction: row;
+  }
+
+  .hero-content {
+    align-items: flex-start;
+    flex: 1;
+    text-align: left;
+    padding: 1rem 0;
+    padding-right: 2rem;
+  }
+
+  .new {
+    padding: 1rem 4rem;
+  }
+
+  .hero-content h1 {
+    padding: 0 4rem;
+    text-align: left;
+  }
+
+  .text {
+    text-align: left;
+    align-self: flex-start;
+    padding: 1rem 4rem;
+  }
+
+  .hero-content_btn {
+    margin: auto 4rem;
+  }
+
+  .hero-img {
+    width: 70%;
+    align-self: flex-end;
+    flex: 1;
+    margin: 0 -11.5rem 4.5rem 0;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .hero {
+    margin-top: 5rem;
+  }
+
+  header {
+    padding-left: 10rem;
+  }
+
+  .hero-content {
+    padding-left: 6rem;
+    padding-right: 2rem;
+    flex: 1;
+  }
+
+  .hero-img {
+    width: 100%;
+    margin: 0 -13rem 4.5rem 0;
+    flex: 1;
+  }
+
+  .hero-content h1 {
+    font-size: 4.5rem;
+    width: 90%;
+  }
+
+  .text {
+    width: 70%;
+  }
+
+  .btn,
+  .preview {
+    font-size: 1.3rem;
+  }
+}

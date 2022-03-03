@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./project_tracking.css" />
+    <script defer src="./project_tracking.js"></script>
+    <title>Project tracking intro component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: -50%;
+        right: -50%;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <div class="spot"></div>
+        <header>
+          <img class="logo" src="./logo (2).svg" alt="logo" />
+          <img
+            id="menu-btn"
+            class="open"
+            src="./icon-hamburger.svg"
+            alt="nav-menu-icon"
+          />
+          <img
+            id="close-btn"
+            class="hidden-btn"
+            src="./icon-close.svg"
+            alt="nav-menu-icon-close"
+          />
+          <ul id="nav" class="nav-list hidden">
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </header>
+
+        <div class="hero">
+          <div class="hero-content">
+            <p class="new"><span>new</span> Monograph Dashboard</p>
+            <h1>Powerful insights into your team</h1>
+            <p class="text">
+              Project planning and time tracking for agile teams
+            </p>
+            <div class="hero-content_btn">
+              <a class="btn" href="#">Schedule a demo</a>
+              <a class="preview" href="#">to see a preview</a>
+            </div>
+          </div>
+          <div class="hero-img">
+            <img
+              src="./illustration-devices.svg"
+              alt="hero-device-illustration"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Coded by <a>subash</a>.
+      </p>
+    </footer>
+  </body>
+</html>
