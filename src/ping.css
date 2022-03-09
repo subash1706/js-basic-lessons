@@ -1,0 +1,272 @@
+:root {
+  --text-dark-color: #151f29;
+  --text-light-color: #969696;
+  --button-color: #4f7df3;
+  --light-border-color: #c2d3ff;
+  --error-color: #ff5263;
+  --main-font: "Libre Franklin", sans-serif;
+}
+
+html {
+  font-family: var(--main-font);
+}
+
+a {
+  text-decoration: none;
+}
+
+header,
+section,
+.input-container,
+footer,
+.social-icons,
+.icons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  height: 11rem;
+  padding-bottom: 1rem;
+  justify-content: flex-end;
+}
+
+.logo {
+  width: 5.4rem;
+  height: 1.5rem;
+}
+
+section {
+  padding: 3.5rem 0 11rem;
+  justify-content: center;
+}
+
+.title {
+  margin: 0 0 2rem;
+  font-size: 2.1rem;
+  font-weight: 300;
+  color: var(--text-light-color);
+}
+
+.title span {
+  font-weight: 700;
+  color: var(--text-dark-color);
+}
+
+.cta-text {
+  margin-bottom: 3.2rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--text-dark-color);
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 7rem;
+  gap: 1rem;
+}
+
+.email {
+  width: 28.1rem;
+  height: 4rem;
+  padding-left: 3rem;
+  border-radius: 2.5rem;
+  border: 0.1rem solid var(--light-border-color);
+  font-size: 1.2rem;
+}
+
+.email.border {
+  border: 0.1rem solid var(--error-color);
+}
+
+.email.success {
+  border: 0.1rem solid green;
+}
+
+.email:focus {
+  color: var(--text-dark-color);
+}
+
+.error-message {
+  position: absolute;
+  bottom: 3rem;
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--error-color);
+  visibility: hidden;
+}
+
+.error-message.error {
+  visibility: visible;
+  position: relative;
+  bottom: 0;
+  margin-bottom: 1.8rem;
+}
+
+.submit-button {
+  width: 28.1rem;
+  height: 4rem;
+  border-radius: 2.5rem;
+  border: none;
+  background: var(--button-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  box-shadow: rgba(79, 125, 243, 0.2) 0px 7px 6px 0px;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  background: #7195f5;
+}
+
+.hero-img {
+  width: 32.1rem;
+  height: 19.5rem;
+}
+
+footer,
+.social-icons,
+.icons-container {
+  justify-content: center;
+}
+
+footer {
+  padding-top: 0.8rem;
+}
+
+.social-icons {
+  margin-bottom: 2.9rem;
+  flex-direction: row;
+  gap: 1.2rem;
+}
+
+.icons-container {
+  width: 3.1rem;
+  height: 3.1rem;
+  border-radius: 50%;
+  border: 0.1rem solid var(--light-border-color);
+}
+
+.icons-container:hover {
+  border: none;
+  background: var(--button-color);
+}
+
+.social-logo {
+  filter: invert(39%) sepia(81%) saturate(2594%) hue-rotate(212deg)
+    brightness(106%) contrast(91%);
+}
+
+.social-logo:hover {
+  filter: brightness(0) invert(1);
+}
+
+.fb-logo {
+  width: 0.9rem;
+  height: 1.5rem;
+}
+
+.tw-logo {
+  width: 1.3rem;
+  height: 1.2rem;
+}
+
+.ig-logo {
+  width: 1.6rem;
+  height: 1.5rem;
+}
+
+.copyright,
+.attribution {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-light-color);
+}
+
+.copyright {
+  margin-bottom: 1.1rem;
+}
+
+.attribution a {
+  color: var(--text-dark-color);
+}
+
+.attribution a:hover {
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 750px) {
+  header {
+    height: 12rem;
+  }
+
+  .logo {
+    width: 8.6rem;
+    height: 2.4rem;
+  }
+
+  section {
+    padding: 5rem 0 6.1rem;
+  }
+
+  .title {
+    margin: 0 0 2.3rem;
+    font-size: 4.7rem;
+  }
+
+  .cta-text {
+    margin-bottom: 4rem;
+    font-size: 2rem;
+  }
+
+  .input-container {
+    margin-bottom: 9rem;
+    flex-direction: row;
+    gap: 1.6rem;
+  }
+
+  .email {
+    width: 42.1rem;
+    height: 5.6rem;
+    font-size: 1.5rem;
+  }
+
+  .error-message {
+    font-size: 1.1rem;
+  }
+
+  .error-message.error {
+    position: absolute;
+    bottom: -24px;
+    left: 46px;
+    margin-bottom: 0;
+  }
+
+  .submit-button {
+    width: 20rem;
+    height: 5.6rem;
+    font-size: 1.5rem;
+  }
+
+  .hero-img {
+    width: 64.1rem;
+    height: 38.8rem;
+  }
+
+  footer {
+    padding-top: 1rem;
+  }
+
+  .social-icons {
+    gap: 1.3rem;
+  }
+
+  .copyright {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+}
