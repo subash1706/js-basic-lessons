@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="stylesheet" href="socialmedia.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Social media dashboard with theme switcher</title>
+
+ <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <div class="content">
+
+    <div id="dashboard" class="container">
+      <section class="cards">
+        <div class="header">
+          <div>
+            <h1>
+              Social Media Dashboard
+            </h1>
+            <span class="sub-heading">
+              Total Followers: 23,004
+            </span>
+          </div>
+          <div class="hr"></div>
+          <div class="theme-switch-wrapper">
+            <span>Dark Mode</span>
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round"></div>
+            </label>
+          </div>
+        </div>
+
+        <article class="card fb">
+          <div class="card-border"></div>  
+          <div class="user">
+            <span class="icon"></span>
+            <span class="handle">
+              @Subash
+            </span>
+          </div>
+          <div class="influence">
+            1987
+            <span>Followers</span>
+          </div>
+          <span class="recent up">
+            12 Today
+          </span>
+        </article>
+        <article class="card tw">
+          <div class="card-border"></div>  
+          <div class="user">
+            <span class="icon"></span>
+            <span class="handle">
+              @Subash
+            </span>
+          </div>
+          <div class="influence">
+            1044
+            <span>Followers</span>
+          </div>
+          <span class="recent up">
+            99 Today
+          </span>
+        </article>
+        <article class="card ig">
+          <div class="card-border"></div>  
+          <div class="user">
+            <span class="icon"></span>
+            <span class="handle">
+              @realmannn#
+            </span>
+          </div>
+          <div class="influence">
+            11k
+            <span>Followers</span>
+          </div>
+          <span class="recent up">
+            1099 Today
+          </span>
+        </article>
+        <article class="card yt">
+          <div class="card-border"></div>  
+          <div class="user">
+            <span class="icon"></span>
+            <span class="handle">
+              Subash_$
+            </span>
+          </div>
+          <div class="influence">
+            8239
+            <span>Subscribers</span>
+          </div>
+          <span class="recent down">
+            144 Today
+          </span>
+        </article>
+      </section>
+    </div>
+   
+    <div id="overview" class="container">
+      <section class="cards">
+        <div class="header">
+          <h2>
+            Overview - Today
+          </h1>
+        </div>
+        <article class="card grid fb">
+            <div class="property faded">
+              Page Views
+            </div>
+            <div class="icon"></div>
+            <div class="value">
+              87
+            </div>
+            <span class="percent-change up">
+              3%
+            </span>
+        </article>
+        <article class="card grid fb">
+            <div class="property faded">
+              Likes
+            </div>
+            <div class="icon"></div>
+            <div class="value">
+              52
+            </div>
+            <span class="percent-change down">
+              2%
+            </span>
+        </article>
+        <article class="card grid ig">
+            <div class="property faded">
+              Likes
+            </div>
+            <div class="icon"></div>
+            <div class="value">
+              5462
+            </div>
+            <span class="percent-change up">
+              2257%
+            </span>
+      </article>
+        <article class="card grid ig">
+            <div class="property faded">
+              Profile Views
+            </div>
+            <div class="icon"></div>
+            <div class="value">
+              52k
+            </div>
+            <span class="percent-change up">
+              1375%
+            </span>
+      </article>
+        <article class="card grid tw">
+            <div class="property faded">
+              Retweets
+            </div>
+            <div class="icon"></div>
+            <div class="value">
+              117
+            </div>
+            <span class="percent-change up">
+              303%
+            </span>
+      </article>
+        <article class="card grid tw">
+            <div class="property faded">
+              Likes
+            </div>
+            <div class="icon"></div>
+            <div class="value">
+              507
+            </div>
+            <span class="percent-change up">
+              553%
+            </span>
+      </article>
+        <article class="card grid yt">
+            <div class="property faded">
+              Likes
+            </div>
+            <div class="icon"></div>
+            <div class="value">
+              107
+            </div>
+            <span class="percent-change down">
+              19%
+            </span>
+      </article>
+        <article class="card grid yt">
+            <div class="property faded">
+              Total Views
+            </div>
+            <div class="icon"></div>
+            <div class="value">
+              1407
+            </div>
+            <span class="percent-change down">
+              12%
+            </span>
+      </article>
+      </section>
+    </div>
+
+  </div>
+  
+  <div class="attribution">
+       Coded by <a href="#">Subash</a>.
+  </div>
+</body>
+<script src="socialmedia.js"></script>
+</html>
