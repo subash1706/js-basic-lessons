@@ -62,7 +62,7 @@ header {
   height: 100vh;
   max-height: 720px;
   background: center/cover no-repeat;
-  background-image: url(../src/mobile/image-header.jpg);
+  background-image: url(./images/mobile/image-header.jpg);
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -184,7 +184,7 @@ nav::after {
     display: none;
   }
   header {
-    background-image: url(../src/desktop/image-header.jpg);
+    background-image: url(./images/desktop/image-header.jpg);
   }
   .header__menu {
     display: -webkit-box;
@@ -275,11 +275,11 @@ nav::after {
 }
 
 .hero__image-1 {
-  background-image: url(../src/mobile/image-transform.jpg) !important;
+  background-image: url(./images/mobile/image-transform.jpg) !important;
 }
 
 .hero__image-2 {
-  background-image: url(../src/mobile/image-stand-out.jpg) !important;
+  background-image: url(./images/mobile/image-stand-out.jpg) !important;
 }
 
 .hero__content {
@@ -328,10 +328,10 @@ nav::after {
     aspect-ratio: 6/5 !important;
   }
   .hero__image-1 {
-    background-image: url(../src/desktop/image-transform.jpg) !important;
+    background-image: url(./images/desktop/image-transform.jpg) !important;
   }
   .hero__image-2 {
-    background-image: url(../src/desktop/image-stand-out.jpg) !important;
+    background-image: url(./images/desktop/image-stand-out.jpg) !important;
   }
   .hero__content {
     margin: auto;
@@ -374,11 +374,11 @@ nav::after {
 }
 
 .features .features__card-1 {
-  background-image: url(../src/mobile/image-graphic-design.jpg);
+  background-image: url(./images/mobile/image-graphic-design.jpg);
 }
 
 .features .features__card-2 {
-  background-image: url(../src/mobile/image-photography.jpg);
+  background-image: url(./images/mobile/image-photography.jpg);
 }
 
 @media only screen and (min-width: 600px) {
@@ -392,11 +392,11 @@ nav::after {
   }
   .features__card-1 {
     width: 50%;
-    background-image: url(../src/desktop/image-graphic-design.jpg) !important;
+    background-image: url(./images/desktop/image-graphic-design.jpg) !important;
   }
   .features__card-2 {
     width: 50%;
-    background-image: url(../src/desktop/image-photography.jpg) !important;
+    background-image: url(./images/desktop/image-photography.jpg) !important;
   }
 }
 
@@ -455,18 +455,18 @@ nav::after {
     padding: 0 1rem;
   }
   .testimonials__card:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
+    grid-row: 1;
+    grid-column: 1;
     grid-area: A;
   }
   .testimonials__card:nth-child(2) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
+    grid-row: 1;
+    grid-column: 2;
     grid-area: B;
   }
   .testimonials__card:nth-child(3) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
+    grid-row: 2;
+    grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: C;
   }
@@ -522,26 +522,25 @@ footer .footer__images {
   -ms-grid-columns: (1fr) [2];
   grid-template-columns: repeat(2, 1fr);
 }
-
 footer .footer__image {
   background: center/contain no-repeat;
   aspect-ratio: 1;
 }
 
 footer .footer__image-1 {
-  background-image: url(../src/mobile/image-gallery-milkbottles.jpg);
+  background-image: url(./images/mobile/image-gallery-milkbottles.jpg);
 }
 
 footer .footer__image-2 {
-  background-image: url(../src/mobile/image-gallery-orange.jpg);
+  background-image: url(./images/mobile/image-gallery-orange.jpg);
 }
 
 footer .footer__image-3 {
-  background-image: url(../src/mobile/image-gallery-cone.jpg);
+  background-image: url(./images/mobile/image-gallery-cone.jpg);
 }
 
 footer .footer__image-4 {
-  background-image: url(../src/mobile/image-gallery-sugar-cubes.jpg);
+  background-image: url(./images/mobile/image-gallery-sugar-cubes.jpg);
 }
 
 @media only screen and (min-width: 600px) {
