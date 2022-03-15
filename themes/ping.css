@@ -1,0 +1,241 @@
+:root {
+    --button-color: #4f7df3;
+    --error-color: #ff5263;
+    --light-border-color: #c2d3ff;
+    --main-font: "Libre Franklin", sans-serif;
+    --text-dark-color: #151f29;
+    --text-light-color: #969696;
+  }
+html {
+    font-family: var(--main-font);    
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  }
+main {
+    display: block;
+  }
+  body {
+    margin: 0;
+  }
+a {
+    text-decoration: none;
+  }
+header,
+section,
+.input-container,
+footer,
+.social-icons,
+.icons-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+header {
+    height: 11rem;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+    width: 100%;
+  }
+.logo {
+    height: 1.5rem;
+    width: 5.4rem;
+  }
+section {
+    justify-content: center;
+    padding: 3.5rem 0 11rem;
+  }
+.title {
+    color: var(--text-light-color);
+    font-size: 2.1rem;
+    font-weight: 300;
+    margin: 0 0 2rem;
+  }
+.title span {
+    color: var(--text-dark-color);
+    font-weight: 700;
+  }
+.cta-text {
+    color: var(--text-dark-color);
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 3.2rem;
+  }
+.input-container {
+    gap: 1rem;
+    margin-bottom: 7rem;
+    position: relative;
+  }
+.email {
+    border-radius: 2.5rem;
+    border: 0.1rem solid var(--light-border-color);
+    font-size: 1.2rem;
+    height: 4rem;
+    padding-left: 3rem;
+    width: 28.1rem;
+  }
+.email.border {
+    border: 0.1rem solid var(--error-color);
+  }
+.email.success {
+    border: 0.1rem solid green;
+  }
+.email:focus {
+    color: var(--text-dark-color);
+  }
+.error-message {
+    bottom: 3rem;
+    color: var(--error-color);
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 300;
+    position: absolute;
+    visibility: hidden;
+  }
+.error-message.error {
+    bottom: 0;
+    margin-bottom: 1.8rem;
+    position: relative;
+    visibility: visible;
+  }
+.submit-button {
+    background: var(--button-color);
+    border-radius: 2.5rem;
+    border: none;
+    box-shadow: rgba(79, 125, 243, 0.2) 0px 7px 6px 0px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    height: 4rem;
+    width: 28.1rem;
+  }
+.submit-button:hover {
+    background: #7195f5;
+    cursor: pointer;
+  }
+.hero-img {
+    height: 19.5rem;
+    width: 32.1rem;
+  }
+footer,
+.social-icons,
+.icons-container {
+    justify-content: center;
+  }
+footer {
+    padding-top: 0.8rem;
+  }
+.social-icons {
+    flex-direction: row;
+    gap: 1.2rem;
+    margin-bottom: 2.9rem;
+  }
+.icons-container {
+    border-radius: 50%;
+    border: 0.1rem solid var(--light-border-color);
+    height: 3.1rem;
+    width: 3.1rem;
+  }
+.icons-container:hover {
+    background: var(--button-color);
+    border: none;
+  }
+.social-logo {
+    filter: invert(39%) sepia(81%) saturate(2594%) hue-rotate(212deg)
+
+    brightness(106%) contrast(91%);
+  }
+.social-logo:hover {
+    filter: brightness(0) invert(1);
+  }
+.fb-logo {
+    height: 1.5rem;
+    width: 0.9rem;
+  }
+.tw-logo {
+    height: 1.2rem;
+    width: 1.3rem;
+  }
+.ig-logo {
+    height: 1.5rem;
+    width: 1.6rem;
+  }
+.copyright,
+.attribution {
+    color: var(--text-light-color);
+    font-size: 1rem;
+    font-weight: 300;
+  }
+.copyright {
+    margin-bottom: 1.1rem;
+  }
+.attribution a {
+    color: var(--text-dark-color);
+  }
+.attribution a:hover {
+    font-weight: 600;
+  }
+@media only screen and (min-width: 750px) {
+  header {
+      height: 12rem;
+    }
+  .logo {
+      height: 2.4rem;
+      width: 8.6rem;
+    }
+  section {
+      padding: 5rem 0 6.1rem;
+    }
+  .title {
+      font-size: 4.7rem;
+      margin: 0 0 2.3rem;
+    }
+  .cta-text {
+      font-size: 2rem;
+      margin-bottom: 4rem;
+    }
+  .input-container {
+      flex-direction: row;
+      gap: 1.6rem;
+      margin-bottom: 9rem;
+    }
+  .email {
+      font-size: 1.5rem;
+      height: 5.6rem;
+      width: 42.1rem;
+    }
+  .error-message {
+      font-size: 1.1rem;
+    }
+  .error-message.error {
+      bottom: -24px;
+      left: 46px;
+      margin-bottom: 0;
+      position: absolute;
+    }
+  .submit-button {
+      font-size: 1.5rem;
+      height: 5.6rem;
+      width: 20rem;
+    }
+  .hero-img {
+      height: 38.8rem;
+      width: 64.1rem;
+    }
+  footer {
+      padding-top: 1rem;
+    }
+  .social-icons {
+      gap: 1.3rem;
+    }
+  .copyright {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }

@@ -1,0 +1,328 @@
+:root {
+    --Dark-Grayish-Blue: hsl(230, 11%, 40%);
+    --Grayish-Blue: hsl(231, 7%, 65%);
+    --Light-Grayish-Blue: hsl(207, 33%, 95%);
+    --Red: hsl(0, 100%, 68%);
+    --Very-Dark-Blue: hsl(230, 29%, 20%);
+  }
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+body {
+    background-color: #fff;
+    font-family: "Barlow", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    min-height: 100vh;
+  }
+img {
+    display: block;
+    max-width: 100%;
+  }
+ul {
+    list-style-type: none;
+  }
+a {
+    text-decoration: none;
+  }
+.spot {
+    align-self: flex-end;
+    background-color: var(--Light-Grayish-Blue);
+    border-bottom-left-radius: 50px;
+    min-height: 62%;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    z-index: -1;
+  }
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    width: 100%;
+  }
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    min-height: 12vh;
+    padding: 1rem 2.2rem;
+    width: 100%;
+  }
+.logo {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+.nav-list {
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    font-family: "Barlow Condensed", sans-serif;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    position: absolute;
+    top: 15%;
+    width: 83%;
+  }
+.nav-list li {
+    padding: 0.5rem;
+  }
+.nav-list li a {
+    color: var(--Very-Dark-Blue);
+    cursor: pointer;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: text-decoration 0.3s ease-out;
+  }
+.nav-list li a:hover,
+.nav-list li a:focus {
+    text-decoration: underline;
+  }
+.nav-list li:last-child {
+    border-top: 1px solid #d3d2d2;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+    width: 90%;
+  }
+.nav-list li:last-child > a {
+    color: var(--Grayish-Blue);
+  }
+.open {
+    cursor: pointer;
+  }
+.hero {
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin: 2rem 0;
+    overflow: hidden;
+  }
+.hero-img {
+    align-self: flex-end;
+    display: flex;
+    margin: 0 -8.5rem 4.5rem 0;
+    padding-left: 1.8rem;
+    width: 33rem;
+  }
+.hero-content {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2.2rem;
+  }
+.hero-content .new {
+    color: var(--Grayish-Blue);
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+.hero-content .new span {
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-right: 0.8rem;
+    padding: 0.25rem 0.7rem;
+  }
+.hero-content h1 {
+    color: var(--Very-Dark-Blue);
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+.text {
+    color: var(--Dark-Grayish-Blue);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+.hero-content_btn {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 0.9rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+    text-transform: uppercase;
+  }
+.btn {
+    background-color: var(--Red);
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-right: 1.5rem;
+    padding: 0.7rem 1.3rem;
+  }
+.preview {
+    color: var(--Grayish-Blue);
+    letter-spacing: 2px;
+  }
+.btn:hover,
+.preview:hover {
+    opacity: 0.8;
+  }
+.btn:focus,
+.preview:focus {
+    opacity: 0.8;
+  }
+.hidden-btn {
+    display: none;
+  }
+.hidden {
+    display: none;
+  }
+@media screen and (min-width: 420px) {
+  .container {
+    max-width: 600px;
+    }
+  header,
+  .hero-content {
+    padding: 1rem 3rem;
+    }
+  .hero-img {
+    margin: 0 -6rem 4.5rem 0;
+    padding-left: 1.5rem;
+    }
+  .spot {
+    min-height: 60%;
+    }
+  }
+@media screen and (min-width: 550px) {
+  .container {
+    max-width: 800px;
+    }
+  header,
+  .hero-content {
+    padding: 1rem 4rem;
+    }
+  .hero-img {
+    align-self: center;
+    margin: 0 -1rem 4.5rem 0;
+    padding-left: 1rem;
+    }
+  }
+@media screen and (min-width: 650px) {
+  .hero-img {
+    align-self: center;
+    margin: 0 0 4.5rem 0;
+    }
+  .hero-content {
+    align-items: center;
+    }
+  .hero-content h1 {
+    padding: 0 5rem;
+    text-align: center;
+    }
+  .text {
+    padding: 0 7rem;
+    text-align: center;
+    }
+  }
+@media screen and (min-width: 800px) {
+  li:last-child {
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 30%;
+  }
+  .container {
+    max-width: 1120px;
+  }
+  .open {
+    display: none;
+  }
+  .nav-list {
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  li:last-child {
+    width: 70%;
+  }
+  .container {
+    max-width: 1500px;
+  }
+  .nav-width 
+  .hero {
+    flex-direction: row;
+    margin-top: 6rem;
+    }
+  .hero-content {
+    align-items: flex-start;
+    flex: 1;
+    padding-right: 2rem;
+    padding: 1rem 0;
+    text-align: left;
+  }
+  .new {
+    padding: 1rem 4rem;
+    }
+  .hero-content h1 {
+    padding: 0 4rem;
+    text-align: left;
+  }
+  .text {
+    align-self: flex-start;
+    padding: 1rem 4rem;
+    text-align: left;
+  }
+  .hero-content_btn {
+    margin: auto 4rem;
+    }
+  .hero-img {
+    align-self: flex-end;
+    flex: 1;
+    margin: 0 -11.5rem 4.5rem 0;
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .hero {
+     margin-top: 5rem;
+  }
+  header {
+    padding-left: 10rem;
+  }
+  .hero-content {
+    flex: 1;
+    padding-left: 6rem;
+    padding-right: 2rem;
+  }
+  .hero-img {
+    flex: 1;
+    margin: 0 -13rem 4.5rem 0;
+    width: 100%;
+  }
+  .hero-content h1 {
+    font-size: 4.5rem;
+    width: 90%;
+  }
+  .text {
+    width: 70%;
+  }
+  .btn,
+  .preview {
+    font-size: 1.3rem;
+  }
+}
