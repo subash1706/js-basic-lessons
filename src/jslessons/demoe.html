@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    const people  = [
+        {name: "john", cool: true, country:"canada"},
+        { name: "scott", cool: true, country: "USA"},
+        {name: "jimmy", cool: false, country: "rajapalayam"}
+    ];
+    // people.forEach is enumeration.
+    people.forEach((person, index) => {
+        console.table(index, person.name, person.cool, person.country)
+    })
+    function cerify (name) {
+        console.count('certifying doctor degree for ${name}')
+        return 'Dr. ${name}'
+    }
+</script>
+const output1  = createGreetings("hello")
+console.log(greet('buddy'));
