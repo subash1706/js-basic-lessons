@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+</body>
+</html>
+<script>
+    const names = ['john' ,'sam', 'peter'];
+console.log(names[0]);
+console.log(names.length);
+console.log(names[names.length - 1]);
+
+// methods of array
+names.push('subash');
+console.log('After push: ' + names);
+//push will add the item at the end
+// itnrepresentd the entire items in the array
+const names2 = [...name, 'ramesh'];
+console.log('names2: ' + names2);
+names.unshift('poppy');
+console.log('unshift:' + names);
+// it adds data to the beginning
+// so the index no of the result of the values will change now .
+
+const names3 = ['raj' , ...names];
+console.log(names3);
+//this will add data at the beginning
+//next method slice()
+
+const bike = ['bianchi', 'miele', 'panasonic', 'miyata', 'RE'];
+    const b1 = [...bike.slice(0, 2)];
+    console.log(b1);
+    // slice takes 2 parameters
+    // from, to
+    // it has copied 2 values from index 0 and assigned to b1
+
+    const b2 = [...bike.slice(2)];
+    console.log(b2);// from 3rd index
+
+    const newBikes = [
+        ...bike.slice(0, 3),
+        'benotto',
+        ...bike.slice(3)
+    ];
+    console.log('newBikes: ' + newBikes);
+    //  then in index 0 and 1 values from bikes is copied using the slice (0,2) method.
+    //the first 2 values are copied.
+    // // in the value 'bebotto' is pushed,
+    // then from the third index again values from bike is copied using slice(2)-the values from 2 ibdex of bike are copied. 
+    const newBikes2 = [
+        ...newBikes.slice(0, 3),
+        ...newBikes.slice(4)
+    ];
+    console.log('newBikes2: ' + newBikes2);  
+    //
+    ///
+    ////
+    const indexOfSam = names.findIndex(name => name === 'sam');
+    console.log('IndexOfSAM:' + indexOfSam); 
+
+    // write a function to delete a name from the array
+    function deleteName(nametodelete, names) {
+        const indexOfname  = names.findIndex(n => n ===nametodelete);
+        console.log('indexOf name to delete: ' + indexOfname);
+        const newarray = [
+            ...names.slice(0, indexOfname),
+            ...names.slice(indexOfname+1)
+        ];
+        return newarray;
+    };
+    const deleteNames = deleteName('john',  names);
+    console.log('After Delete: ' + deleteNames);
+    console.log('Before Delete:' + names)
+
+    ///
+    const  numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    // anytime you want to use a mutation method and  NOT mutate the original array.
+    // we need to take a copy of the array 
+    // numbers.reverse();//mutable
+    // console.log(numbers);
+
+    const numbersreversed  = [...numbers].reverse();//immutable
+    console.log(numbersreversed);
+    console.log(numbers);
+
+    // console.log(numbers);
+    // // numbers.splice(3,2);
+    // // (method) array<number>.splice(start: number, deletecount?: number)
+    //     //mutation method -  modities /  deletes the value in the source array
+    // //from the 3rd index delete the next 2 values
+    // // the value in numbers are modified / deleted
+    // // console.log(numbers);
+    // const pizzaSlice = numbers.slice(2, 4); // start and  end index
+    // //(method) array<number>.slice(star?: number\, end?: number):
+    // // immutable method - does not changes the source array.
+    // console.log('pizzaSlice: ' + pizzaSlice);
+    // console.log('original numbers: ' + numbers);
+    // //both are  numbers.splice(x,y); only so 
+    // //same syntax but different behaviour
+// ITERATION
+//toppings method********
+const toppings = ['Mushrooms ', 'Tomatoes', 'Eggs', 'Chili', 'Lettuce', 'Avocado', 'Chiles', 'Bacon', 'Pickles', 'Onions', 'Cheese'];
+    const students = [
+      {
+        id: '11ce',
+        first_name: 'Dall',
+        last_name: 'Puckring',
+      },
+      {
+        id: '2958',
+        first_name: 'Margarete',
+        last_name: 'Brandi',
+      },
+      {
+        id: '565a',
+        first_name: 'Bendicty',
+        last_name: 'Woodage',
+      },
+      {
+        id: '3a16',
+        first_name: 'Micki',
+        last_name: 'Mattes',
+      },
+      {
+        id: 'f396',
+        first_name: 'Flory',
+        last_name: 'Gladeche',
+      },
+      {
+        id: 'de5f',
+        first_name: 'Jamill',
+        last_name: 'Emilien',
+      },
+      {
+        id: '54cb',
+        first_name: 'Brett',
+        last_name: 'Aizikowitz',
+      },
+      {
+        id: '9135',
+        first_name: 'Lorry',
+        last_name: 'Smallman',
+      },
+      {
+        id: '978f',
+        first_name: 'Gilly',
+        last_name: 'Flott',
+      },
+    ];
+
+    const people = [
+      {
+        birthday: 'April 22, 1993',
+        names: {
+          first: 'Keith',
+          last: 'Buckley'
+        }
+      },
+      {
+        birthday: 'January 3, 1975',
+        names: {
+          first: 'Larry',
+          last: 'Heep'
+        }
+      },
+      {
+        birthday: 'February 12, 1944',
+        names: {
+          first: 'Linda',
+          last: 'Bermeer'
+        }
+      }
+    ];
+
+
+    const buns = ['egg', 'wonder', 'brioche'];
+
+    const meats = {
+      beyond: 10,
+      beef: 5,
+      pork: 7
+    };
+
+    const prices = {
+      hotDog: 453,
+      burger: 765,
+      sausage: 634,
+      corn: 234,
+    };
+
+    const orderTotals = [342, 1002, 523, 34, 634, 854, 1644, 2222];
+
+    const feedback = [
+      { comment: 'Love the burgs', rating: 4 },
+      { comment: 'Horrible Service', rating: 2 },
+      { comment: 'Smoothies are great, liked the burger too', rating: 5 },
+      { comment: 'Ambiance needs work', rating: 3 },
+      { comment: 'I DONT LIKE BURGERS', rating: 1 },
+    ];
+
+    const faces = ['😃', '🤠', '🤡', '🤑', '😵', '🌞', '🐶', '😺'];
+
+    const inventory = [
+      { type: 'shirt', price: 4000 },
+      { type: 'pants', price: 4532 },
+      { type: 'socks', price: 234 },
+      { type: 'shirt', price: 2343 },
+      { type: 'pants', price: 2343 },
+      { type: 'socks', price: 542 },
+      { type: 'pants', price: 123 },
+    ];
+    //1- fuction toopings
+    function  logItemsInArray(item, index, originalarray) {
+        const nextitem = originalarray[index + 1];
+        const previtem = originalarray[index - 1];
+        //log the item
+        console.log(item);
+        //log the prev item if there is one
+        previtem ? console.log(previtem) : null;
+        //log the next item if there is onr
+        nextitem ? console.log(nextitem): null;
+        // if the last item in the array, say good bye
+        index === originalarray.length - 1
+        ? console.log('GoodBye')
+        : console.log('Getting the next item');
+        
+        // index === originalarray.length && console.log('GoodBye');
+        console.log('-------🍕--------');
+    }
+    console.log(toppings);
+    toppings.forEach(logItemsInArray);
+    //using 1 parameters
+    function displayToppings(item)
+    {
+        console.log('currentItem: ' + item);
+    }
+    toppings.forEach(displayToppings);
+    toppings.map(displayToppings);
+    ///
+    function addArms(faces) {
+        return `${faces}`
+
+    }
+    const toys =  faces.map(addArms);
+    console.log(toys);
+    // increase each number in orderTotala by 25% and create a new array
+    function increasevalue(item) {
+        return item * 1.25;
+    }
+    const newTotalNumber = orderTotals.map(increasevalue);
+    console.log(number)
+    ///
+    function tallyNumbers(prvNumber, currentNumber) {
+        console.log(`the total so far is ${prvNumber}`);
+        console.log(`the current number is ${currentNumber}`);
+        console.log('========');
+        // return the current tally PLUS the amount of this order return prvNumber + currentNumber;
+        return prvNumber + currentNumber;
+    }
+    const allOrders = orderTotals.reduce(tallyNumber)
+
+</script>
