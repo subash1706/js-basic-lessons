@@ -1,5 +1,4 @@
 const form = document.getElementById('form')
-form.novalidate = true
 const email = document.getElementById('email')
 const msg = document.querySelector('.msg-error')
 const error = document.querySelector('.error')
