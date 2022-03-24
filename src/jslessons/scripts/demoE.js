@@ -1,0 +1,1 @@
+import { printEvenNos } from "./util.js";
