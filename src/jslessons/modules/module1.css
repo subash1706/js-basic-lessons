@@ -1,6 +1,6 @@
 table, th, td {
-    border: 20px solid rgb(137, 137, 179);
-    background-color: rgb(137, 137, 179);
+    border: 20px solid rgb(97, 97, 173);
+    background-color: rgb(97, 97, 173);
     table-layout: center;
     text-align: center;
 }
@@ -16,7 +16,6 @@ h1{
     color:rgb(212, 222, 231);
     font-style: italic;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgb(137, 137, 179);
 }
 select{
     background-color:whitesmoke;
@@ -28,5 +27,7 @@ body{
  position: absolute;
  top: 20%;
  left: 30%;
- background-image: url(../../../images/currency\ 1.webp) ;
+ background-image: url(../../../images/7D7o.gif);
+ background-size:cover;
+ image-resolution:initial;
 }
