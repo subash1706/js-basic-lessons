@@ -1,0 +1,32 @@
+table, th, td {
+    border: 20px solid rgb(137, 137, 179);
+    background-color: rgb(137, 137, 179);
+    table-layout: center;
+    text-align: center;
+}
+td, th{
+    background-color:whitesmoke;
+}
+select {
+    background-color:whitesmoke;
+    height: 50%;
+    width: 50%;
+}
+h1{
+    color:rgb(212, 222, 231);
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(137, 137, 179);
+}
+select{
+    background-color:whitesmoke;
+}
+tr, h1{
+    text-align: center;
+}
+body{               
+ position: absolute;
+ top: 20%;
+ left: 30%;
+ background-image: url(../../../images/currency\ 1.webp) ;
+}
