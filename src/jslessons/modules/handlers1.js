@@ -8,4 +8,4 @@ export function getOptions(data) {
         }  ${currency}</option>`
     )
     .join('');
-}  
+} 

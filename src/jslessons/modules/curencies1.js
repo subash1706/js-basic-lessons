@@ -1,5 +1,4 @@
-//List of currencies
-const currencies = {
+export const currencies = {
     MSG: 'Select a Currency',
     USD: 'United States Dollar',
     AUD: 'Australian Dollar',
@@ -34,28 +33,5 @@ const currencies = {
     ZAR: 'South African Rand',
     EUR: 'Euro',
   };
-  //Elements
-  const from = document.getElementById('currency1');
-  const to = document.getElementById('currency2');
-  from.innerHTML = getOptions(currencies);
- to.innerHTML = getOptions(currencies);
-  //Handlers
-  function getOptions(data) {
-    return Object.entries(data)
-  
-      .map(
-        ([country, currency]) =>
-          `<option value="${country}">${
-            country == 'MSG' ? ' ' : country
-          }  ${currency}</option>`
-      )
-      .join('');
-  }  
-  document.getElementById('amount').addEventListener('change', myFunction);
-  //Conversion
-  function myFunction() {
-    var currency = document.getElementById('amount');
-    var output = Math.random(currency);
-    document.getElementById('result').innerHTML = output;
-  }
+
   
