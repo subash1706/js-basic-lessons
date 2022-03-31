@@ -1,4 +1,4 @@
-import { list1, list2, list3, list4, list5, list6, list7, list8, list9, list10 } from "./application";
+import { list1, list2, list3, list4, list5, list6, list7, list8, list9, list10 } from "./application.js";
 var n1 = 1;
 export function search() {
 	var search = document.getElementById('search').value;

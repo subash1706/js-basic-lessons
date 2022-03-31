@@ -1,5 +1,5 @@
-import { list1, list2, list3, list4, list5, list6, list7, list8, list9, list10 } from "./application";
-import { getRadioValue, getRadioValue1 } from "./radiodata";
+import { list1, list2, list3, list4, list5, list6, list7, list8, list9, list10 } from "./application.js";
+import { getRadioValue, getRadioValue1 } from "./radiodata.js";
 var n = 1;
 var x = 0;
 export function AddRow(){

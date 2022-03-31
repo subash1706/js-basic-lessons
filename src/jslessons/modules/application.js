@@ -1,5 +1,5 @@
-import { AddRow } from "./table-display";
-import { search } from "./search";
+import { AddRow } from "./table-display.js";
+import { search } from "./search.js";
 export var list1 = [];
 export var list2 = [];
 export var list3 = [];

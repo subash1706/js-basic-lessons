@@ -1,13 +1,12 @@
 @import url(../../../node_modules/bootstrap/dist/css/bootstrap.css);
-.bg{
-
-    background-image: url(../../../images/bg111.jpg);
-}    
+   
 h1{
     color: rgb(14, 13, 17);
 }
 .card{
-    background-color:transparent;
+    background-image: url(../../../images/bg111.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 60px;
     margin: -4.5em 0 2.5em;
     padding: 7em 4em;
