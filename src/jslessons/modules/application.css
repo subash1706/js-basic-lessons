@@ -1,0 +1,54 @@
+@import url(../../../node_modules/bootstrap/dist/css/bootstrap.css);
+.bg{
+
+    background-image: url(../../../images/bg111.jpg);
+}    
+h1{
+    color: rgb(14, 13, 17);
+}
+.card{
+    background-color:transparent;
+    border-radius: 60px;
+    margin: -4.5em 0 2.5em;
+    padding: 7em 4em;
+    text-align: center;
+}
+.button{
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 10px;
+    font-size: x-large;
+    margin-bottom:0%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:-2%;
+    left: 25%;
+    
+}
+.button:hover{
+    background-color: hsl(248, 31%, 63%) ;
+}
+input{
+    border-radius: 10px;
+    font-size: medium;
+}
+label {
+    table-layout: center;
+    text-align: center;
+    display: inline-block;
+}
+td, th{
+    background-color:whitesmoke;
+}
+#show{
+    border: 20px solid rgb(56, 56, 228);
+    background-color: rgb(97, 97, 173);
+    table-layout: center;
+    text-align: center;                
+}
+
+#show1{
+    border: 20px solid rgb(36, 221, 82);
+    background-color: rgb(97, 173, 129);
+    table-layout: center;
+    text-align: center;                
+}
