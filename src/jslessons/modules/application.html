@@ -13,45 +13,45 @@
     <h1 style="text-align: center;">Application for RT-PCR Test</h1>
     <form>
             <div>
-                <label for="name">Name:</label>
+                <label class="field" for="name">Name:</label>
                 <input type="text" name="name" id="name">
             </div>
             <div><br><br>
-                <label for="Aadhar">Aadhar Number:</label>
+                <label class="field" for="Aadhar">Aadhar Number:</label>
                 <input type="text" name="Aadhar" id="Aadhar">
             </div>
             <div><br><br>
-                <label for="Dob">Date of Birth:</label>
-                <input type="date" name="Dob" id="Dob">
+                <label class="field" for="Dob">Date of Birth:</label>
+                <input class="one" type="date" name="Dob" id="Dob">
             </div>
             <div><br><br>
-                <label for="City">City:</label>
+                <label class="field" for="City">City:</label>
                 <input type="text" name="City" id="City">
             </div>
             <div><br><br>
-                <label for="dot">Date of Test:</label>
-                <input type="date" name="dot" id="dot">
+                <label class="field" for="dot">Date of Test:</label>
+                <input class="one" type="date" name="dot" id="dot">
             </div>
             <div><br><br>
-                <label for="tot">Time of Test:</label>
-                <input type="time" name="tot" id="tot">
+                <label class="field" for="tot">Time of Test:</label>
+                <input class="one" type="time" name="tot" id="tot">
             </div>
             <div><br><br>
-                <label for="result">Result:</label>
+                <label class="field" for="result">Result:</label>
                 <input type="radio" name="result" id="result" value="positive"><label>positive</label>
                 <input type="radio" name="result" id="result" value="negative"><label>Negative</label>
 
             </div>
             <div><br><br>
-                <label for="lname">Lab Name:</label>
+                <label class="field" for="lname">Lab Name:</label>
                 <input type="text" name="lname" id="lname">
             </div>
             <div><br><br>
-                <label for="rep.no">Report Number:</label>
+                <label class="field" for="rep.no">Report Number:</label>
                 <input type="text" name="rep.no" id="rep.no">
             </div>
             <div><br><br>
-                <label for="gender">Gender:</label>
+                <label class="field" for="gender">Gender:</label>
                 <input type="radio" name="gender" id="gender" value="Male"><label>Male</label>
                 <input type="radio" name="gender" id="gender" value="Female"><label>Female</label>
                 <input type="radio" name="gender" id="gender" value="others"><label>Others</label>
@@ -60,7 +60,7 @@
                 <input type="button" name="button" id="btn" value="Add" onclick="AddRow()">
             </div>              
     </form>    
-    <table  style="text-align: center;" id="show">			
+    <table  style="text-align: center;" id="show"><br><br>			
         <tr>
             <th>Name</th>
             <th>Aadhar number</th>
@@ -76,11 +76,9 @@
     </table>
     <div style="text-align: center;"><br>
         <input type="text" id="search" placeholder="search here">
+        <input type="button" name="button1" id="b" value="search" onclick="search()">
     </div>
-    <div style="text-align: center;"><br>
-        <input type="button" name="button1" id="btn1" value="search" onclick="search()">
-    </div>
-<table id="show1" style="text-align: center;">			
+<table id="show1" style="text-align: center;"><br>			
     <tr>
         <th>Name</th>
         <th>Aadhar number</th>
