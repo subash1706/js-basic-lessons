@@ -13,7 +13,7 @@ export var list10 = [];
 
 document.querySelector("#btn").addEventListener("click",AddRow);
 
-document.querySelector("#btn1").addEventListener("click",AddRow);
+document.querySelector("#btn1").addEventListener("click",search);
 
 
 	
