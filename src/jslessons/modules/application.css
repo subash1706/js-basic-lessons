@@ -45,15 +45,15 @@ td, th{
     background-color:whitesmoke;
 }
 #show{
-    border: 20px solid rgb(56, 56, 228);
-    background-color: rgb(97, 97, 173);
+    border: 20px solid rgb(123, 123, 184);
+    background-color: rgb(148, 148, 167);
     table-layout: center;
     text-align: center;                
 }
 
 #show1{
-    border: 20px solid rgb(36, 221, 82);
-    background-color: rgb(97, 173, 129);
+    border: 20px solid rgb(89, 66, 172);
+    background-color: rgb(111, 105, 119);
     table-layout: center;
     text-align: center;                
 }
