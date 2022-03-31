@@ -5,7 +5,7 @@ var x = 0;
 export function AddRow(){
 	var AddRown = document.getElementById('show');
 	var NewRow = AddRown.insertRow(n);
-}
+
     list1[x] = document.getElementById("name").value;
 	list2[x] = document.getElementById("Aadhar").value;
 	list3[x] = document.getElementById("Dob").value;
@@ -43,3 +43,4 @@ export function AddRow(){
 
 	n++;
 	x++;
+}
