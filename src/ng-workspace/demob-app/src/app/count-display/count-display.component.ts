@@ -6,6 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./count-display.component.css']
 })
 export class CountDisplayComponent implements OnInit {
+  @Input()
+  count: number = 10;
+  
 
   constructor() { }
 
@@ -13,3 +16,4 @@ export class CountDisplayComponent implements OnInit {
   }
 
 }
+

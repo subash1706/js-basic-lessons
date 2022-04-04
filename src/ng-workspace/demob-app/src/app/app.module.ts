@@ -10,6 +10,7 @@ import { CustomerFormComponent } from './customer-form/customer-form.component';
 import { CounterAppComponent } from './counter-app/counter-app.component';
 import { CountDisplayComponent } from './count-display/count-display.component';
 import { HitButtonComponent } from './hit-button/hit-button.component';
+import { RtPcrComponent } from './rt-pcr/rt-pcr.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { HitButtonComponent } from './hit-button/hit-button.component';
     CounterAppComponent,
     CountDisplayComponent,
     HitButtonComponent,
+    RtPcrComponent,
   ],
   imports: [
     BrowserModule,

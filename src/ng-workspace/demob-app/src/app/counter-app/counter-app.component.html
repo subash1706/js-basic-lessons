@@ -1,1 +1,8 @@
 <p>counter-app works!</p>
+
+  <div class="pane-body">
+    <app-hit-button [label]="hitIncrementValue" (hit)="increasecount"></app-hit-button>
+  </div>
+  <div>
+    <app-count-display [count] = "totalCount"></app-count-display>
+  </div>

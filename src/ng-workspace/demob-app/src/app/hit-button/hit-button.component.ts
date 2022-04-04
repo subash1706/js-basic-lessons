@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-hit-button',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HitButtonComponent implements OnInit {
 
+  //input properties
+  @Input()
+  label: number = 0;
+  //output
+  @Output()
+  hit =  new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+  btnClickHandler(){
+    this.hit.emit(this.label);
   }
 
 }
