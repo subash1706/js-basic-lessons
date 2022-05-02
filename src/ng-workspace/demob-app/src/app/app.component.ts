@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'demob-app';
-  location = 'Theni';
-  total: number = 1000;
+  // title = 'demob-app';
+  // location = 'Theni';
+  // total: number = 1000;
+  title = 'life-cycle hooks';
   onBoxValueChange(paramData: any)
   {
     console.log("app component: " + paramData.value);

@@ -1,22 +1,36 @@
 <div class="panel-heading"> Employee Form</div>
 <div class="panel-body">
     <form [formGroup]="employeeFormGroup">
-        <div class="form-group">
-            <label for="">First Name:</label>
-            <input id="fname" class="form-control" formControlName="firstname">
+        <div class="form-group"
+        [class.has-error]="firstname.invalid && firstname.touched">
+            <label for="firstname">First Name:</label>
+            <input id="firstname" class="form-control" formControlName="firstname" placeholder="firstname required" required>
+            <div class="help-block text-danger" *ngIf="firstname.touched">
+                <span *ngIf="firstname.errors?.['required']">
+                    First Name is required!!!
+                </span>
+                <span *ngIf="firstname.errors?.['minlength']">
+                    Firstname must be minimum 3 chars!!!
+                </span>
+            </div>
         </div>
         <div class="form-group">
-            <label for="lname">Last Name:</label>
-            <input id="lname" class="form-control" formControlName="lastname">        
+            <label for="lastname">Last Name:</label>
+            <input id="lastname" class="form-control" formControlName="lastname">            
         </div>
-        <div formGroupName="emailGroup">
+        <div formGroupName="emailGroup"
+            [class.has-error]="emailGroup.invalid && emailGroup.touched">
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input id="email" class="form-control" formControlName="email">
             </div>
-            <div class="from-group">
-                <label for="confirmEmail">confirmS Email:</label>
+            <div class="form-group">                
+                <label for="confirmEmail">confirm Email:</label>
                 <input id="confirmEmail" class="form-control" formControlName="confirmEmail" placeholder="Confirm Email (required)">
+            </div>
+            <div class="help-block text-danger"
+                *ngIf="emailGroup.errors?.['match'] && emailGroup.touched">
+                Emails does not MATCH!!!!!
             </div>
             <!-- <div *ngif="employeeFormGroup.get('emailGroup').errors?.match">
                 Emails does not MATCH!!!!
@@ -24,19 +38,37 @@
         </div>
         <div class="form-group">
             <label for="mobile">Mobile:</label>
-            <input id="mobile" class="form-Control" formControlName="mobile" placeholder="Enter the phone number">
+            <input id="mobile" class="form-control" formControlName="mobile" placeholder="Enter the phone number">
+            <div class="help-block text-danger">
+                <span *ngIf="mobile.errors?.['required']">
+                    Mobile number is required!!!
+                </span>
+                <span *ngIf="mobile.invalid">
+                    Mobile number must be between 60000000000 and 999999999 
+                </span>
+            </div>
         </div>
         <div class="form-group">
-            <label for="notification">Send Notification:</label>
-            <input id="notification" type="radio" class="form-Control" formControlName="sendNotification" value="email">&nbsp; Email
-            <input id="notification" type="radio" class="form-Control" formControlName="sendNotification" value="sms">&nbsp; SMS
+            <label for="notification">Send Notification: </label>
+            <input id="notification" type="radio" class="form-Control" formControlName="sendNotification" value="email" (click)="doNotification('email')">&nbsp; Email
+            <input id="notification" type="radio" class="form-Control" formControlName="sendNotification" value="sms" (click)="doNotification('sms')">&nbsp; SMS
         </div>
-        <div class="form-group">
+        <div class="form-group"
+        [class.has-error]="range.invalid && range.touched">
             <label for="range">Range:</label>
-            <input id="range" class="form-control" formcontrolName="range"/>
+            <input id="range" class="form-control" formControlName="range">
+            <div class="help-block text-danger" *ngIf="range.invalid && range.touched">
+                Range must be between 10 and 20!!!
+            </div>
         </div>
         <hr>
         <button class="btn btn-primary"
-            [disabled]="!employeeFormGroup.valid">submit</button>
+            [disabled]="!employeeFormGroup.valid">submit</button>&nbsp;
+        <button type="button" class="btn btn-secondary"
+          (click)="loadEmployee()">Load Employee</button>
     </form>
+    <pre>Form Status: {{employeeFormGroup.status}}</pre>
+    <pre>fname Status: {{firstname.value}}</pre>
+    <pre>Form value: {{employeeFormGroup.value | json}} </pre>
 </div>
+
